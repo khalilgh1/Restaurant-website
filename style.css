@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 1rem 0 0 0;
+}
+body{
+    background: linear-gradient(to right, hsla(12, 100%, 69%,0.6), hsla(26, 98%, 74%,0.6));
+}
+header {
+    height: 50px;
+    background-color: hsl(0, 1%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 70px;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: hsl(0, 1%, 54%);
+}
+
+.home {
+    height: 390px;
+    color: azure;
+    margin-bottom: 70px;
+    /* overflow: hidden; */
+}
+/* adding blur effect to background*/
+.home .background{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-image: url(/images/food.jpg);
+    background-size: cover;
+    background-clip: border-box;
+    filter:blur(3px);
+}
+.home .background-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid hsl(0, 0%, 20%);
+    border-radius: 20px;
+    z-index: -1;
+}
+.colored{
+    color: rgb(223, 223, 49);
+    margin-left: 10px;
+}
+.home h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    height: 20%;
+    text-shadow: 4px 4px black;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 200px;
+    /* h1 animation*/
+    width: 22ch;
+    animation: typing 1.5s steps(30), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+/* h1 animation*/
+.wrapper {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: flex;
+    place-items: center;
+}
+#enjoy{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px black;
+    opacity: 0%;
+    width: max-content;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.home #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.home button {
+    font-size: 1.1em;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    background-color: hsl(0, 3%, 15%);
+    color: azure;
+    cursor: pointer;
+}
+.home button:hover{
+    color:hsl(0, 1%, 50%)
+}
+.menu{
+    background-color: hsl(0, 4%, 14%);
+    border: 3px solid hsl(0, 0%, 20%);
+    border-radius: 20px;
+    color: azure;
+    margin-bottom: 70px;
+}
+.menu h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+}
+ .menu h3{
+    display: flex;
+    justify-content: center;
+font-size: 2rem;
+}
+li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border: 2px rgb(79, 89, 90);
+    border-style:groove;
+    border-radius: 5px;
+}
+.menu .dish{
+    font-size: 1.5rem;
+    /* width:max-content; */
+}
+.menu .price{
+    font-size: 1.5rem;
+    color: rgb(238, 226, 56);
+    /* width:max-content; */
+}
+.menu .image{
+    display: flex;
+    justify-content: center;
+
+}
+.menu img{
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid rgb(73, 73, 70);
+    border-radius: 10px;
+}
+.menu img:hover , .location img:hover{
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.menu img:hover{
+    transform: scale();
+}
+.menu .label{
+    font-weight: bold;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.location{
+    height: 450px;
+    border: 2px solid;
+    background-color: hsl(0, 4%, 14%);
+    color: azure;
+    border-radius: 20px;
+    margin-bottom: 70px;
+}
+.location h1{
+font-size: 3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90px;
+}
+.location #address{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px;
+}
+.location #ad{
+    width: 50%;
+    border: 2px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:110px;
+    left: 40px;
+
+}
+.location #gps{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.location img{
+    height: 70%;
+    width: 60%;
+    border: 4px  rgb(231, 235, 235);
+    border-style:ridge;
+    border-radius: 10px;
+}
+.location p{
+    font-size: 2rem;
+    text-align: center;
+}
+.contact{
+margin-top: 50px;
+border: 2px solid;
+border-radius: 20px;
+color: azure;
+background-color: hsl(0, 4%, 14%);
+}
+#info{
+display: flex;
+justify-content: center;
+}
+.contact h1{
+    height: 80px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact #phone, #mail{
+display: flex;
+height: 80px;
+align-items: center;
+justify-content: center;
+border: 2px solid black;
+border-radius: 10px;
+cursor: pointer;
+width: 400px;
+}
+.fa-solid.fa-phone.fa-2x ,.fa-solid.fa-envelope.fa-2x{
+    margin-left: 10px;
+}
+.contact h3{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+/* now customizing the scroll bar (thanks gpt) */
+/* This styles the scrollbar track */
+::-webkit-scrollbar-track {
+    background: rgb(99, 99, 99); /* Track background color */
+    
+}
+
+/* This styles the scrollbar thumb (the part that you drag) */
+::-webkit-scrollbar-thumb {
+    background: #262323; /* Thumb color */
+    border-radius: 20px;
+}
+
+/* This styles the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #514e4e; /* Thumb hover color */
+}
+
+/* This styles the scrollbar itself (including the track and thumb) */
+::-webkit-scrollbar {
+    width: 20px; /* Width of the scrollbar */
+}
+/*Now adding smooth transtion between pages (thanks again gpt) */
+@keyframes grow {
+    0%{
+        transform: scale(1.1,1.1);
+    }
+    50%{
+        transform: scale(1.15,1.15);
+    }
+    100%{
+        transform: scale(1.15,1.15);
+    }
+}
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  @keyframes fade-in {
+    0%{
+        opacity: 0%;
+    }
+    80%{
+        opacity: 100%;
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1.1,1.1);
+        opacity: 100%;
+    }
+  }
+  @media screen and (min-width: 400px) and (max-width: 768px) {
+    header nav a {
+        margin-right: 30px;
+        padding: 8px;
+    }
+    .home h1 {
+        font-size: 2.1rem;
+        left: 50px;
+    }
+    .home h2 {
+        font-size: 1.5rem;
+    }
+    .menu h1, .location h1, .contact h1 {
+        font-size: 2.5rem;
+    }
+    .menu h3 {
+        font-size: 1.75rem;
+    }
+    .menu .dish, .menu .price {
+        font-size: 1.3rem;
+    }
+    .menu img {
+        width: 70%;
+        height: 220px;
+    }
+    .location #ad {
+        width: 70%;
+        top: 50px;
+        left: 10px;
+    }
+    .location img {
+        height: 60%;
+        width: 70%;
+    }
+    .contact #phone, .contact #mail {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .contact h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav a {
+        margin-right: 40px;
+        padding: 10px;
+    }
+    .home h1 {
+        font-size: 3.5rem;
+        left: 100px;
+    }
+    .home h2 {
+        font-size: 1.85rem;
+    }
+    .menu h1, .location h1, .contact h1 {
+        font-size: 3rem;
+    }
+    .menu h3 {
+        font-size: 1.85rem;
+    }
+    .menu .dish, .menu .price {
+        font-size: 1.4rem;
+    }
+    .menu img {
+        width: 60%;
+        height: 250px;
+    }
+    .location #ad {
+        width: 60%;
+        top: 80px;
+        left: 20px;
+    }
+    .location img {
+        height: 70%;
+        width: 60%;
+    }
+    .contact #phone, .contact #mail {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .contact h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+    header nav a {
+        margin-right: 50px;
+        padding: 12px;
+    }
+    .home h1 {
+        font-size: 4rem;
+        left: 150px;
+    }
+    .home h2 {
+        font-size: 2rem;
+    }
+    .menu h1, .location h1, .contact h1 {
+        font-size: 3.5rem;
+    }
+    .menu h3 {
+        font-size: 2rem;
+    }
+    .menu .dish, .menu .price {
+        font-size: 1.5rem;
+    }
+    .menu img {
+        width: 50%;
+        height: 250px;
+    }
+    .location #ad {
+        width: 50%;
+        top: 100px;
+        left: 40px;
+    }
+    .location img {
+        height: 70%;
+        width: 60%;
+    }
+    .contact #phone, .contact #mail {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    .contact h3 {
+        font-size: 1.2rem;
+    }
+}
