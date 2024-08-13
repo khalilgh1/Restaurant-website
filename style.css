@@ -44,7 +44,7 @@ header nav a:hover {
     right: 0;
     bottom: 0;
     background-repeat: no-repeat;
-    background-image: url(Restaurant-website/food.jpg);
+    background-image: url(food.jpg);
     background-size: cover;
     background-clip: border-box;
     filter:blur(3px);
